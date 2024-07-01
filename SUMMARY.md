@@ -2,31 +2,39 @@
 
 * [Overview](README.md)
 
-## LlamaPay
+## Payments Gateway
 
-* [Features](llamapay/features/README.md)
-  * [Multi-chain](llamapay/features/multi-chain.md)
-  * [Deposits](llamapay/features/deposits.md)
-  * [Withdrawals](llamapay/features/withdrawals.md)
-  * [Debt](llamapay/features/debt.md)
-  * [Gas](llamapay/features/gas.md)
-  * [Disperse](llamapay/features/disperse.md)
-  * [Precision](llamapay/features/precision.md)
-* [Gnosis Safe](llamapay/gnosis-safe/README.md)
-  * [Importing CSV for Vesting](llamapay/gnosis-safe/importing-csv-for-vesting.md)
-* [Bot](llamapay/bot.md)
-* [Pricing](llamapay/pricing.md)
-* [Links](llamapay/links.md)
-* [Token](llamapay/token.md)
-* [Tutorials](llamapay/tutorials/README.md)
-  * [Depositing](llamapay/tutorials/depositing.md)
-  * [Creating a Stream](llamapay/tutorials/creating-a-stream.md)
-  * [Withdrawing](llamapay/tutorials/withdrawing.md)
-* [Roadmap](llamapay/roadmap.md)
-* [Importing CSV for Payments](llamapay/importing-csv-for-payments.md)
+* [Why use LlamaPay?](payments-gateway/why-use-llamapay/README.md)
+  * [How are gas fees so cheap?](payments-gateway/why-use-llamapay/how-are-gas-fees-so-cheap.md)
+* [Integration](payments-gateway/integration/README.md)
+  * [API Reference](payments-gateway/integration/api-reference.md)
+  * [Create a new payment](payments-gateway/integration/create-a-new-payment.md)
+* [Fees](payments-gateway/fees.md)
+* [Subscriptions Yield](payments-gateway/subscriptions-yield.md)
 
-## Technical Stuff
+## Outgoing Payments
 
-* [Contracts](technical-stuff/contracts.md)
-* [Subgraph](technical-stuff/subgraph.md)
-* [Bounty](technical-stuff/bounty.md)
+* [Features](outgoing-payments/features/README.md)
+  * [Multi-chain](outgoing-payments/features/multi-chain.md)
+  * [Deposits](outgoing-payments/features/deposits.md)
+  * [Withdrawals](outgoing-payments/features/withdrawals.md)
+  * [Debt](outgoing-payments/features/debt.md)
+  * [Gas](outgoing-payments/features/gas.md)
+  * [Disperse](outgoing-payments/features/disperse.md)
+  * [Precision](outgoing-payments/features/precision.md)
+* [Gnosis Safe](outgoing-payments/gnosis-safe/README.md)
+  * [Importing CSV for Vesting](outgoing-payments/gnosis-safe/importing-csv-for-vesting.md)
+* [Bot](outgoing-payments/bot.md)
+* [Pricing](outgoing-payments/pricing.md)
+* [Links](outgoing-payments/links.md)
+* [Tutorials](outgoing-payments/tutorials/README.md)
+  * [Depositing](outgoing-payments/tutorials/depositing.md)
+  * [Creating a Stream](outgoing-payments/tutorials/creating-a-stream.md)
+  * [Withdrawing](outgoing-payments/tutorials/withdrawing.md)
+* [Importing CSV for Payments](outgoing-payments/importing-csv-for-payments.md)
+* [Contracts](outgoing-payments/contracts.md)
+* [Subgraph](outgoing-payments/subgraph.md)
+
+## Security
+
+* [Bounty](security/bounty.md)
