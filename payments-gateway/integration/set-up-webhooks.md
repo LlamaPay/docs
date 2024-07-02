@@ -26,7 +26,7 @@ The event received from the webhook will look like this:
       hosted_url: 'https://checkout.llamapay.io/pay/fd533947-6889-4970-8fb9-6441342dc07d', // URL where users can pay
       pricing_type: 'fixed_price', // Type of payment, provided at payment creation
     },
-    id: 'e1e4ff60-9fcb-4a9f-b0df-fb5b0139cf2d"', // id of event, will be the same on all retries so you can use it to avoid processing same event twice
+    id: 'e1e4ff60-9fcb-4a9f-b0df-fb5b0139cf2d', // id of event, will be the same on all retries so you can use it to avoid processing same event twice
     type: 'charge:pending' // Type of event
   },
 }
