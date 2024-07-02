@@ -17,7 +17,7 @@ paths:
     post:
       tags:
         - payments
-      summary: Create a new charge
+      summary: Create a new payment
       description: Creates a new payment that users can then pay
       requestBody:
         content:
@@ -49,21 +49,14 @@ paths:
         required: true
       responses:
         '200':
-          description: Successfully created a payment/charge
+          description: Successfully created a payment
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   data:
-                    type: object
-                    properties:
-                      id:
-                        type: string
-                        example: 3e66112f-e4ad-4d5d-acb2-332e18fe4e4f
-                      hosted_url:
-                        type: string
-                        example: https://checkout.llamapay.io/pay/3e66112f-e4ad-4d5d-acb2-332e18fe4e4f
+                    $ref: '#/components/schemas/Payment'
         '401':
           description: Invalid API Key sent on Authorization header
       security:
@@ -72,10 +65,41 @@ paths:
       tags:
         - payments
       summary: Fetch a paginated list of payments
-      description: Pagination is handled by querying the urls returned in pagination.previous_uri and pagination.next_uri or by using the query parameters ending_before and starting_after directly
+      description: Pagination is handled by querying the urls returned in pagination.previous_uri and pagination.next_uri or by using the query parameters ending_before and starting_after directly with payment ids. In other words, to see all results keep querying pagination.next_uri until its null.
+      parameters:
+        - name: starting_after
+          in: query
+          description: Optional and for pagination, filters results to those whose id parameters are higher than the id sent
+          required: false
+          schema:
+            type: string
+        - name: ending_before
+          in: query
+          description: Optional and for pagination, filters results to those whose id parameters are lower than the id sent
+          required: false
+          schema:
+            type: string
       responses:
         '200':
           description: Array of payments
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagination: 
+                    type: object
+                    properties:
+                      previous_uri:
+                        type: string
+                        example: https://api.llamapay.io/charges?ending_before=fd533947-6889-4970-8fb9-6441342dc07d
+                      next_uri:
+                        type: string
+                        example: https://api.llamapay.io/charges?starting_after=082ac3c4-8c93-4c59-8e43-e4531640e264
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Payment'
       security:
         - authorization: []
   /charges/{payment_id}:
@@ -93,13 +117,40 @@ paths:
       responses:
         '200':
           description: Payment info
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Payment'
         '404':
-          description: Payment/charge doesn't exist
+          description: Payment doesn't exist
       security:
         - authorization: []
 components:
+  schemas:
+    Payment:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 3e66112f-e4ad-4d5d-acb2-332e18fe4e4f
+        hosted_url:
+          type: string
+          example: https://checkout.llamapay.io/pay/3e66112f-e4ad-4d5d-acb2-332e18fe4e4f
+        created_at:
+          type: string
+          example: "2024-07-01T04:57:41.034Z"
+        metadata:
+          type: object
+          example:
+            userId: 0xngmi
+        pricing_type:
+          type: string
+          example: fixed_price
   securitySchemes:
     authorization:
       type: apiKey
-      name: authorization
+      name: Authorization
       in: header
