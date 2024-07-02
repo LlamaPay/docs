@@ -1,5 +1,7 @@
 # API Reference
 
+### Authentication
+
 All calls must be authenticated with the header `Authorization: llamapay_sk_YOUR_API_KEY`.\
 You can obtain the required API Key in the Developer tab on [LlamaPay's interface](https://checkout.llamapay.io/).
 
