@@ -1,0 +1,105 @@
+openapi: 3.0.3
+info:
+  title: LlamaPay Payments Gateway API
+  description: |-
+    To obtain your API Key go to [checkout.llamapay.io](https://checkout.llamapay.io/)
+  version: 1.0.0
+externalDocs:
+  description: Guides and documentation
+  url: https://docs.llamapay.io/payments-gateway/integration
+servers:
+  - url: https://api.llamapay.io
+tags:
+  - name: payments
+    description: Create and manage payments
+paths:
+  /charges:
+    post:
+      tags:
+        - payments
+      summary: Create a new charge
+      description: Creates a new payment that users can then pay
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pricing_type:
+                  type: string
+                  enum:
+                    - fixed_price
+                    - no_price
+                    - subscription
+                local_price:
+                  type: object
+                  example:
+                    amount: '10.00'
+                    currency: USD
+                metadata:
+                  type: object
+                  example:
+                    userId: 0xngmi
+                redirect_url:
+                  type: string
+                  example: https://mypage.com/success
+                cancel_url:
+                  type: string
+                  example: https://mypage.com/failure
+        required: true
+      responses:
+        '200':
+          description: Successfully created a payment/charge
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 3e66112f-e4ad-4d5d-acb2-332e18fe4e4f
+                      hosted_url:
+                        type: string
+                        example: https://checkout.llamapay.io/pay/3e66112f-e4ad-4d5d-acb2-332e18fe4e4f
+        '401':
+          description: Invalid API Key sent on Authorization header
+      security:
+        - authorization: []
+    get:
+      tags:
+        - payments
+      summary: Fetch a paginated list of payments
+      description: Pagination is handled by querying the urls returned in pagination.previous_uri and pagination.next_uri or by using the query parameters ending_before and starting_after directly
+      responses:
+        '200':
+          description: Array of payments
+      security:
+        - authorization: []
+  /charges/{payment_id}:
+    get:
+      tags:
+        - payments
+      summary: Fetch a single payment
+      parameters:
+        - name: payment_id
+          in: path
+          description: id parameter obtained from /charges or webhook events
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Payment info
+        '404':
+          description: Payment/charge doesn't exist
+      security:
+        - authorization: []
+components:
+  securitySchemes:
+    authorization:
+      type: apiKey
+      name: authorization
+      in: header
