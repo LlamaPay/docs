@@ -7,8 +7,9 @@
 * [Why use LlamaPay?](payments-gateway/why-use-llamapay/README.md)
   * [How are gas fees so cheap?](payments-gateway/why-use-llamapay/how-are-gas-fees-so-cheap.md)
 * [Integration](payments-gateway/integration/README.md)
-  * [API Reference](payments-gateway/integration/api-reference.md)
   * [Create a new payment](payments-gateway/integration/create-a-new-payment.md)
+  * [Set up webhooks](payments-gateway/integration/set-up-webhooks.md)
+  * [API Reference](payments-gateway/integration/api-reference.md)
 * [Fees](payments-gateway/fees.md)
 * [Subscriptions Yield](payments-gateway/subscriptions-yield.md)
 

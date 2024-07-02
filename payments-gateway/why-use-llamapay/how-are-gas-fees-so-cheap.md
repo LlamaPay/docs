@@ -20,4 +20,18 @@ In the worse case scenario where there's a huge DDoS attack which could increase
 
 ## Subscriptions
 
-WIP
+#### Constant costs
+
+Gas costs for retrieving subscription payments in our contracts are independent of the number of payers. This is important because other systems rely on pulling tokens from payers' wallets directly or on a contract that needs to perform actions for each payer, thus the gas costs grow linearly with the number of payers.
+
+Because of that, gas costs can end ballooning significantly when you reach hundreds or thousands of players, while adding unpredictable liabilities because you don't know how much those gas fees will cost you in the future. Our system keeps costs constant so as you grow costs will always remain cheap.
+
+#### Yield buffer
+
+On top of that, our contracts have a yield buffer that significantly reduces costs when users deposit money, making costs costs equivalent to those you'd get if there was no yield farming involved at all.
+
+LlamaPay subscriptions generate yield by depositing funds on AAVE, but doing so can increase 2-3x the gas costs of deposit transactions. To avoid that, users deposit only to our contract, and once enough deposits have accumulated, we have a bot that triggers a deposit to AAVE, amortizing costs.
+
+To illustrate, imagine the contract has 1m deposited on aave and there are users depositing money for 5$/mo subscriptions for a year (so 60$ per user). Instead of depositing into aave on each transaction, we would wait till there are 2.1k$ on the contract and then trigger a deposit for everyone, thus lowering the total gas costs by 35x (there's only 1 aave deposit instead of 35, one for each transaction).
+
+This introduces economies of scale since it's shared among all the companies that use llamapay, and it also improves security because if there was some bug around aave deposits an attacker wouldn't be able to trigger it at will within their attack transaction.

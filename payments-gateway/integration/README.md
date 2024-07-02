@@ -13,9 +13,9 @@ Have you integrated Coinbase Commerce already? Our API is fully backwards compat
 {% endhint %}
 
 1. Create a company by clicking **Get Started** on [https://checkout.llamapay.io/](https://checkout.llamapay.io/)
-2. Set up a server with a webhook endpoint to get notified when the payment is paid.
+2. [Set up a server with a webhook endpoint](set-up-webhooks.md) to get notified when the payment is paid.
 3. Go to the Developer tab in LlamaPay UI, set your webhook URL and copy your API Key and webhook secret.
-4. To create a new payment, make a <mark style="color:green;">`POST`</mark> request to`https://api.llamapay.io/charges`, then take `hosted_url` from the response and send it to your users to pay.
+4. To [create a new payment](create-a-new-payment.md), make a <mark style="color:green;">`POST`</mark> request to`https://api.llamapay.io/charges`, then take `hosted_url` from the response and send it to your users to pay.
 
 Here's a basic express server that implements the system above:
 
