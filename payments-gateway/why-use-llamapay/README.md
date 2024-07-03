@@ -14,7 +14,7 @@
 | Fees on direct payments                      | 0-0.5%                                        | 1%                                     |
 | Chains supported                             | 8                                             | 3                                      |
 | Subscriptions                                | [✅](https://emojipedia.org/check-mark-button) | [❌](https://emojipedia.org/cross-mark) |
-| Gas cost of USDT payment                     | 57,294                                        | 343,594                                |
+| Gas cost of first USDT payment               | 57,294                                        | 343,594                                |
 | Signatures/txs needed for first USDT payment | 1                                             | 3                                      |
 | Gnosis Safe support                          | [✅](https://emojipedia.org/check-mark-button) | [❌](https://emojipedia.org/cross-mark) |
 | Permissions system for team delegation       | [✅](https://emojipedia.org/check-mark-button) | [❌](https://emojipedia.org/cross-mark) |
