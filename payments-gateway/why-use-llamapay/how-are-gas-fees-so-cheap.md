@@ -10,9 +10,9 @@ Another solution is to do the transfer through a contract where a unique id is a
 
 ### Our solution
 
-Before making a payment, users send a request to our server claiming the payment, such as "I will pay payment abcde from address 0x123", then when a transaction comes from address 0x123 we know that it must be paying abcde.
+Before making a payment, users send a request to our server claiming the payment, such as "I will pay payment ABCDE from address 0x123", then when a transaction comes from address 0x123 we know that it must be paying ABCDE.
 
-But what happens if two different users claim the same address for different payments? In that case we add 0.000001$ to the second payment such that it's possible to perfectly differentiate between the two potential transactions. However this should almost never happen, as it should only happen in the case where an attacker predicts a future transfer perfectly and tries to grief the user).
+But what happens if two different users claim the same address for different payments? In that case we add 0.000001$ to the second payment such that it's possible to perfectly differentiate between the two potential transactions. However this should almost never happen, as it should only happen in the case where an attacker predicts a future transfer perfectly and tries to grief the user.
 
 Because the transaction is just a simple transfer, it achieves the minimum gas cost possible and, because all wallets have logic for parsing transfers, it's very easy for all users to verify exactly what the transaction is doing and check it's not malicious, which improves UX compared to systems where you have to approve other contracts, interact with them and sign messages.
 
