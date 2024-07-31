@@ -11,7 +11,6 @@
   * [Create a new payment](payments-gateway/integration/create-a-new-payment.md)
   * [Set up webhooks](payments-gateway/integration/set-up-webhooks.md)
   * [API Reference](payments-gateway/integration/api-reference.md)
-* [Fees](payments-gateway/fees.md)
 * [Subscriptions Yield](payments-gateway/subscriptions-yield.md)
 
 ***
