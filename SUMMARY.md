@@ -6,6 +6,7 @@
 
 * [Why use LlamaPay?](payments-gateway/why-use-llamapay/README.md)
   * [How are gas fees so cheap?](payments-gateway/why-use-llamapay/how-are-gas-fees-so-cheap.md)
+  * [Why use LlamaPay instead of paying and sending an etherscan link?](payments-gateway/why-use-llamapay/why-use-llamapay-instead-of-paying-and-sending-an-etherscan-link.md)
 * [Integration](payments-gateway/integration/README.md)
   * [Create a new payment](payments-gateway/integration/create-a-new-payment.md)
   * [Set up webhooks](payments-gateway/integration/set-up-webhooks.md)
@@ -15,7 +16,7 @@
 
 ***
 
-* [Pricing](pricing.md)
+* [Pricing](outgoing-payments/pricing.md)
 
 ## Outgoing Payments
 
