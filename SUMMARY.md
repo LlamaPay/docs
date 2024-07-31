@@ -13,6 +13,10 @@
 * [Fees](payments-gateway/fees.md)
 * [Subscriptions Yield](payments-gateway/subscriptions-yield.md)
 
+***
+
+* [Pricing](pricing.md)
+
 ## Outgoing Payments
 
 * [Features](outgoing-payments/features/README.md)
@@ -26,7 +30,6 @@
 * [Gnosis Safe](outgoing-payments/gnosis-safe/README.md)
   * [Importing CSV for Vesting](outgoing-payments/gnosis-safe/importing-csv-for-vesting.md)
 * [Bot](outgoing-payments/bot.md)
-* [Pricing](outgoing-payments/pricing.md)
 * [Links](outgoing-payments/links.md)
 * [Tutorials](outgoing-payments/tutorials/README.md)
   * [Depositing](outgoing-payments/tutorials/depositing.md)
