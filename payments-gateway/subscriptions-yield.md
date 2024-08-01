@@ -8,4 +8,4 @@ If that same user had deposited 1.2k$ instead, then yearly yield would be 60$ an
 
 All this while the receiver always receives the full subscription amount, so receiver can be getting paid 5$/mo while payer only loses 2.5$/mo or even nothing.
 
-Tis is how LlamaPay enables free subscriptions, and even if users doesn't deposit enough money to fully offset costs they still benefit from this feature because their subscription costs will still be partially reduced.
+This is how LlamaPay enables free subscriptions, and even if users doesn't deposit enough money to fully offset costs they still benefit from this feature because their subscription costs will still be partially reduced.
