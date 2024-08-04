@@ -1,10 +1,8 @@
 # How LlamaPay works
 
-
-
 Here’s how it works for both payers and payees:
 
-For Payers To use LlamaPay as a payer, start by inputting the payee's information. Specify the payee by entering their wallet address (e.g., 0x...), and provide a name or role for reference, such as "Alice - Designer." Next, enter the payment details, specifying the amount (e.g., 4000 USDC) and the frequency of the payment (e.g., monthly). Once you have entered these details, initiate the payment stream to start automatically sending payments over time.
+For Payers to use LlamaPay as a payer, start by inputting the payee's information. Specify the payee by entering their wallet address (e.g., 0x...), and provide a name or role for reference, such as "Alice - Designer". Next, enter the payment details, specifying the amount (e.g., 4000 USDC) and the frequency of the payment (e.g., monthly). Once you have entered these details, initiate the payment stream to start automatically sending payments over time.
 
 To ensure continuous payments, it's important to keep your balance topped up. If you forget to top up your balance, LlamaPay offers an option to borrow funds to maintain the stream, preventing any interruptions in payment.
 
