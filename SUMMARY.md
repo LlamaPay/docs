@@ -38,6 +38,9 @@
 * [Importing CSV for Payments](outgoing-payments/importing-csv-for-payments.md)
 * [Contracts](outgoing-payments/contracts.md)
 * [Subgraph](outgoing-payments/subgraph.md)
+* [FAQ](outgoing-payments/faq/README.md)
+  * [How LlamaPay works](outgoing-payments/faq/how-llamapay-works.md)
+  * [How to Withdraw from LlamaPay](outgoing-payments/faq/how-to-withdraw-from-llamapay.md)
 
 ## Security
 
